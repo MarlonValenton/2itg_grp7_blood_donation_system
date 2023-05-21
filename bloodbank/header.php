@@ -19,6 +19,9 @@
 			<li class="nav-item">
 				<a class="nav-link btn btn-light" href="abs.php">Available blood samples</a>
             </li>
+			            <li class="nav-item">
+                <a class="nav-link btn btn-light" href="4a-cal-page.php">Schedule Donation</a>
+            </li>
             <li class="nav-item">
                 <a href="hprofile.php?id=<?php echo $_SESSION['hid']; ?>" class="nav-link btn font-weight-bold"><img src="image/hospital.png" width="15" height="15" class="rounded-circle"><mark><?php echo $_SESSION['hname']; ?></mark></a>
             </li>
@@ -36,6 +39,10 @@
             <li class="nav-item">
                 <a class="nav-link btn btn-light" href="abs.php">Available blood samples</a>
             </li>
+			</li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-light" href="4a-cal-page.php">Schedule Donation</a>
+            </li>
             <li class="nav-item">
                 <a href="rprofile.php?id=<?php echo $_SESSION['rid']; ?>" class="nav-link btn font-weight-bold" href="#"><img src="image/user.png" width="15" height="15" class="rounded-circle"> <mark><?php echo ' '.$_SESSION['rname']; ?></mark></a>
             </li>
@@ -49,6 +56,9 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link btn btn-light" href="abs.php">Available blood samples</a>
+            </li>
+			            <li class="nav-item">
+                <a class="nav-link btn btn-light" href="4a-cal-page.php">Schedule Donation</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link btn btn-light" href="register.php">Register</a>
