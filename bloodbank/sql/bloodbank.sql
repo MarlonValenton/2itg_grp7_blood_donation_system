@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 24, 2020 at 08:29 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Host: 127.0.0.1
+-- Generation Time: May 22, 2023 at 02:02 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,160 +24,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bloodinfo`
+-- Table structure for table `events`
 --
 
-CREATE TABLE `bloodinfo` (
-  `bid` int(11) NOT NULL,
-  `hid` int(11) NOT NULL,
-  `bg` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bloodinfo`
---
-
-INSERT INTO `bloodinfo` (`bid`, `hid`, `bg`) VALUES
-(1, 1, 'B+'),
-(2, 2, 'A+');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bloodrequest`
---
-
-CREATE TABLE `bloodrequest` (
-  `reqid` int(11) NOT NULL,
-  `hid` int(11) NOT NULL,
-  `rid` int(11) NOT NULL,
-  `bg` varchar(11) NOT NULL,
-  `status` varchar(100) NOT NULL DEFAULT 'Pending'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bloodrequest`
---
-
-INSERT INTO `bloodrequest` (`reqid`, `hid`, `rid`, `bg`, `status`) VALUES
-(1, 1, 1, 'B+', 'Pending');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `hospitals`
---
-
-CREATE TABLE `hospitals` (
-  `id` int(11) NOT NULL,
-  `hname` varchar(100) NOT NULL,
-  `hemail` varchar(100) NOT NULL,
-  `hpassword` varchar(100) NOT NULL,
-  `hphone` varchar(100) NOT NULL,
-  `hcity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `hospitals`
---
-
-INSERT INTO `hospitals` (`id`, `hname`, `hemail`, `hpassword`, `hphone`, `hcity`) VALUES
-(1, 'Gandhi hospital', 'gandhi@gmail.com', 'gandhi', '7865376358', 'Delhi'),
-(2, 'Unknown hospital', 'unknown@gmail.com', 'unknown', '9876543267', 'unknown');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `receivers`
---
-
-CREATE TABLE `receivers` (
-  `id` int(11) NOT NULL,
-  `rname` varchar(100) NOT NULL,
-  `remail` varchar(100) NOT NULL,
-  `rpassword` varchar(100) NOT NULL,
-  `rphone` varchar(100) NOT NULL,
-  `rbg` varchar(10) NOT NULL,
-  `rcity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `receivers`
---
-
-INSERT INTO `receivers` (`id`, `rname`, `remail`, `rpassword`, `rphone`, `rbg`, `rcity`) VALUES
-(1, 'test', 'test@gmail.com', 'test', '8875643456', 'A+', 'lucknow'),
-(2, 'xyz', 'xyz@gmail.com', 'xyz', '8875643456', 'AB+', 'Punjab');
+CREATE TABLE `events` (
+  `evt_id` bigint(20) NOT NULL,
+  `evt_start` datetime NOT NULL,
+  `evt_end` datetime NOT NULL,
+  `evt_text` text NOT NULL,
+  `evt_color` varchar(7) NOT NULL,
+  `evt_bg` varchar(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `bloodinfo`
+-- Indexes for table `events`
 --
-ALTER TABLE `bloodinfo`
-  ADD PRIMARY KEY (`bid`),
-  ADD KEY `hid` (`hid`);
-
---
--- Indexes for table `bloodrequest`
---
-ALTER TABLE `bloodrequest`
-  ADD PRIMARY KEY (`reqid`),
-  ADD KEY `hid` (`hid`);
-
---
--- Indexes for table `hospitals`
---
-ALTER TABLE `hospitals`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `hemail` (`hemail`);
-
---
--- Indexes for table `receivers`
---
-ALTER TABLE `receivers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `remail` (`remail`);
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`evt_id`),
+  ADD KEY `evt_start` (`evt_start`),
+  ADD KEY `evt_end` (`evt_end`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `bloodinfo`
+-- AUTO_INCREMENT for table `events`
 --
-ALTER TABLE `bloodinfo`
-  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `bloodrequest`
---
-ALTER TABLE `bloodrequest`
-  MODIFY `reqid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `hospitals`
---
-ALTER TABLE `hospitals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `receivers`
---
-ALTER TABLE `receivers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `bloodinfo`
---
-ALTER TABLE `bloodinfo`
-  ADD CONSTRAINT `bloodinfo_ibfk_1` FOREIGN KEY (`hid`) REFERENCES `hospitals` (`id`);
+ALTER TABLE `events`
+  MODIFY `evt_id` bigint(20) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
