@@ -14,11 +14,7 @@
    <?php require 'message.php'; ?>
 
         <div class="row justify-content-center">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-xs-6 mb-5" style="width: 60%">
-                <div class="card">
-                    <img src="image/bg.png" class="card-img-top">
-                </div>
-            </div>
+            
 
             <div class="col-lg-9">
             <div class="row">
@@ -117,12 +113,13 @@
                     <dd>Smoking tobacco causes NCDs such as lung disease, heart disease and stroke. Tobacco kills not only the direct smokers but even non-smokers through second-hand exposure. Currently, there are around 15.9 million Filipino adults who smoke tobacco but 7 in 10 smokers are interested or plan to quit.
                     If you are currently a smoker, it’s not too late to quit. Once you do, you will experience immediate and long-term health benefits. If you are not a smoker, that’s great! Do not start smoking and fight for your right to breathe tobacco-smoke-free air.</dd>
                     <dt>Drink only safe water</dt>
-                    <dt>Get tested</dt>
-                    <dt>Follow traffic laws</dt>
-                    <dt>Talk to someone you trust if you're feeling down</dt>
+                    <dd>Water is life. The sooner those in power understand this, the sooner this law of water being available to everyone can be implemented. Water is the number one source of nutrition.  The human body is made of 60% water, and this is a clear enough indication of the importance of water. Humans need to be adequately hydrated for their physiological systems to function. Additionally, water helps maintain organ health and allows the blood to maintain the consistency it requires to flow freely and transport oxygen and nutrients to every cell of the body.</dd>
+                    
                     <dt>Clean your hands properly</dt>
+                    <dd>Washing hands can keep you healthy and prevent the spread of respiratory and diarrheal infections. Germs can spread from person to person or from surfaces to people when you: Touch your eyes, nose, and mouth with unwashed hands. Prepare or eat food and drinks with unwashed hands.</dd>
                     <dt>Have regular check-ups</dt>
-                    Visit here to get more health tips.
+                    <dd>Regular medical checkups allow doctors to pick up signs of diseases that the patients may not even know to exist. With routine screenings, the doctor can diagnose potentially severe or life-threatening conditions and prevent any kinds of risks before it is too late or it takes a turn for the worse.</dd>
+                    <dt>Visit here to get more health tips.<dt>
                     <a href="https://www.who.int/philippines/news/feature-stories/detail/20-health-tips-for-2020" target="_blank"> World Health Organisation</a>
                 </div>
             </div>
