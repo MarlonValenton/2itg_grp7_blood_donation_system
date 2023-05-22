@@ -6,27 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- ANDROID + CHROME + APPLE + WINDOWS APP -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="white">
-    <link rel="apple-touch-icon" href="icon-512.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Calendar">
-    <meta name="msapplication-TileImage" content="icon-512.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-
-    <!-- WEB APP MANIFEST -->
-    <!-- https://web.dev/add-manifest/ -->
-    <link rel="manifest" href="5-manifest.json">
-
-    <!-- SERVICE WORKER -->
-    <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("5-worker.js");
-    }
-    </script>
-
+ 
     <!-- JS + CSS -->
     <script src="4b-calendar.js"></script>
     <link rel="stylesheet" href="4c-calendar.css">
