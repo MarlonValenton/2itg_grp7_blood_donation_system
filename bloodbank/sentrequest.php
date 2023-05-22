@@ -22,16 +22,16 @@ session_start();
 		<?php require 'message.php'; ?>
 
 	<table class="table table-responsive table-striped rounded mb-5">
-		<tr><th colspan="8" class="title">Sent requests</th></tr>
-		<tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>City</th>
-			<th>Phone</th>
-			<th>Blood Group</th>
-			<th>Status</th>
-			<th>Action</th>
+		<tr class="tableBloodSamp"><th colspan="8" class="title tableBloodSamp">Sent requests</th></tr>
+		<tr class="tableBloodSamp">
+			<th class="tableBloodSamp">#</th>
+			<th class="tableBloodSamp">Name</th>
+			<th class="tableBloodSamp">Email</th>
+			<th class="tableBloodSamp">City</th>
+			<th class="tableBloodSamp">Phone</th>
+			<th class="tableBloodSamp">Blood Group</th>
+			<th class="tableBloodSamp">Status</th>
+			<th class="tableBloodSamp">Action</th>
 		</tr>
 
 		    <div>
@@ -46,15 +46,15 @@ session_start();
 
 		<?php while($row = mysqli_fetch_array($result)) { ?>
 
-		<tr>
-			<td><?php echo ++$counter;?></td>
-			<td><?php echo $row['hname'];?></td>
-			<td><?php echo $row['hemail'];?></td>
-			<td><?php echo $row['hcity'];?></td>
-			<td><?php echo $row['hphone'];?></td>
-			<td><?php echo $row['bg'];?></td>
-			<td><?php echo $row['status'];?></td>
-			<td><?php if($row['status'] == 'Accepted'){ ?>
+		<tr class="tableBloodSamp">
+			<td class="tableBloodSamp"><?php echo ++$counter;?></td>
+			<td class="tableBloodSamp"><?php echo $row['hname'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['hemail'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['hcity'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['hphone'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['bg'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['status'];?></td>
+			<td class="tableBloodSamp"><?php if($row['status'] == 'Accepted'){ ?>
 			<?php }
 			else{ ?>
 				<a href="file/cancel.php?reqid=<?php echo $row['reqid'];?>" class="btn btn-danger">Cancel</a>
@@ -64,7 +64,6 @@ session_start();
 		<?php } ?>
 	</table>
 </div>
-    <?php require 'footer.php'; ?>
 </body>
 </html>
 <?php } ?>

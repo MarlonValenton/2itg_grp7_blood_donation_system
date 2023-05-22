@@ -56,8 +56,8 @@
   ?>
     <div class="col-lg-4 col-md-5 col-sm-6 col-xs-7 mb-5">
           <table class="table table-striped table-responsive">
-            <th colspan="4" class="title">Blood Bank</th>
-            <tr>
+            <th colspan="4" class="title tableBloodSamp">Blood Bank</th>
+            <tr class="tableBloodSamp">
               <th>#</th>
 
               <th>Blood Samples</th>
@@ -73,11 +73,11 @@
             ?>
             </div>
             <?php while($row = mysqli_fetch_array($result)) { ?>
-            <tr>
-              <td><?php echo ++$counter; ?></td>
+            <tr class="tableBloodSamp">
+              <td class="tableBloodSamp"><?php echo ++$counter; ?></td>
 
-              <td><?php echo $row['bg'];?></td>
-              <td><a href="file/delete.php?bid=<?php echo $row['bid'];?>" class="btn btn-danger">Delete</a></td>
+              <td class="tableBloodSamp"><?php echo $row['bg'];?></td>
+              <td class="tableBloodSamp"><a href="file/delete.php?bid=<?php echo $row['bid'];?>" class="btn btn-danger">Delete</a></td>
             </tr>
             <?php } ?>
           </table>
@@ -85,6 +85,5 @@
 
    </div>
 </div>
-<?php require 'footer.php' ?>
 </body>
 <?php } ?>

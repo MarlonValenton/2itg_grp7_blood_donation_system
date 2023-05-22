@@ -22,16 +22,16 @@ session_start();
 		<?php require 'message.php'; ?>
 
 	<table class="table table-responsive table-striped rounded mb-5">
-		<tr><th colspan="9" class="title">Blood requests</th></tr>
-		<tr>
-			<th>#</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>City</th>
-			<th>Phone</th>
-			<th>Blood Group</th>
-			<th>Status</th>
-			<th colspan="2">Action</th>
+		<tr class="tableBloodSamp"><th colspan="9" class="title tableBloodSamp">Blood requests</th></tr>
+		<tr class="tableBloodSamp">
+			<th class="tableBloodSamp">#</th>
+			<th class="tableBloodSamp">Name</th>
+			<th class="tableBloodSamp">Email</th>
+			<th class="tableBloodSamp">City</th>
+			<th class="tableBloodSamp">Phone</th>
+			<th class="tableBloodSamp">Blood Group</th>
+			<th class="tableBloodSamp">Status</th>
+			<th class="tableBloodSamp" colspan="2">Action</th>
 		</tr>
 
 		    <div>
@@ -46,20 +46,20 @@ session_start();
 
 		<?php while($row = mysqli_fetch_array($result)) { ?>
 
-		<tr>
-			<td><?php echo ++$counter;?></td>
-			<td><?php echo $row['rname'];?></td>
-			<td><?php echo $row['remail'];?></td>
-			<td><?php echo $row['rcity'];?></td>
-			<td><?php echo $row['rphone'];?></td>
-			<td><?php echo $row['bg'];?></td>
-			<td><?php echo 'You have '.$row['status'];?></td>
-			<td><?php if($row['status'] == 'Accepted'){ ?> <a href="" class="btn btn-success disabled">Accepted</a> <?php }
+		<tr class="tableBloodSamp">
+			<td class="tableBloodSamp"><?php echo ++$counter;?></td>
+			<td class="tableBloodSamp"><?php echo $row['rname'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['remail'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['rcity'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['rphone'];?></td>
+			<td class="tableBloodSamp"><?php echo $row['bg'];?></td>
+			<td class="tableBloodSamp"><?php echo 'You have '.$row['status'];?></td>
+			<td class="tableBloodSamp"><?php if($row['status'] == 'Accepted'){ ?> <a href="" class="btn btn-success disabled">Accepted</a> <?php }
 			else{ ?>
 				<a href="file/accept.php?reqid=<?php echo $row['reqid'];?>" class="btn btn-success">Accept</a>
 			<?php } ?>
 			</td>
-			<td><?php if($row['status'] == 'Rejected'){ ?> <a href="" class="btn btn-danger disabled">Rejected</a> <?php }
+			<td class="tableBloodSamp"><?php if($row['status'] == 'Rejected'){ ?> <a href="" class="btn btn-danger disabled">Rejected</a> <?php }
 			else{ ?>
 				<a href="file/reject.php?reqid=<?php echo $row['reqid'];?>" class="btn btn-danger">Reject</a>
 			<?php } ?>
@@ -69,7 +69,6 @@ session_start();
 		<?php } ?>
 	</table>
 </div>
-    <?php require 'footer.php'; ?>
 </body>
 </html>
 <?php } ?>
