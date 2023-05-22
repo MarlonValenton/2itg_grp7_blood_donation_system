@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
     <link rel="icon" type="image/png" href="favicon.png">
-
- 
+<?php require 'head.php'; ?>
     <!-- JS + CSS -->
     <script src="4b-calendar.js"></script>
     <link rel="stylesheet" href="4c-calendar.css">
+	
   </head>
   <body>
+    <?php include 'header.php'; ?>
+	<style>body{background-color:white;}</style>
     <?php
     // (A) DAYS MONTHS YEAR
     $months = [
