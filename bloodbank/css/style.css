@@ -8,7 +8,7 @@
   /* Body styles */
   body {
     font-family: Arial, sans-serif;
-    background-color: #ffc800;
+    background-color: #ffd95c;
   }
   
   .container {
@@ -19,14 +19,14 @@
   
   .card {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
   }
   
   .card-header {
-    background-color: #333;
+    background-color: #363636;
     color: #fff;
     font-weight: bold;
     font-size: 18px;
@@ -37,7 +37,7 @@
   .card-body {
     color: #555;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 2;
   }
   
   .card-body dt {
@@ -144,7 +144,7 @@ margin-left: 10px;
 }
 
 .navbar-brand{
-    text-shadow: 1px 1px 2px red, 0 0 50px black, 0 0 5px white;
+	font-family: Bahnschrift;
     font-weight: bold;
     font-size: 1.5em;
 }

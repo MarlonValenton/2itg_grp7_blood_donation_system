@@ -22,10 +22,10 @@ if (isset($_SESSION['hid'])) {
           <div class="card rounded">
             <ul class="nav nav-tabs justify-content-center bg-light" style="padding: 20px">
               <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#hospitals">Hospitals</a>
+                <a class="nav-link active" data-toggle="tab" href="#hospitals">Hospital's</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#receivers">Receivers</a>
+                <a class="nav-link" data-toggle="tab" href="#receivers">Receiver's</a>
               </li>
             </ul>
 
