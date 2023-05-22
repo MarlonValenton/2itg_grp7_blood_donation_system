@@ -4,7 +4,7 @@
     ?>
 <!DOCTYPE html>
 <html>
-<?php $title="Bloodbank | home page"; ?>
+<?php $title="Blood Donation System | home page"; ?>
 <?php require 'head.php'; ?>
 <body>
     <?php require 'header.php'; ?>
@@ -89,15 +89,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
-                <div class="card">
-                    <div class="card-header text-center">Admin contact</div>
-                    <div class="card-body">
-                        <i class="fa fa-envelope"> </i> <a > bloodbank@gmail.com</a><br><br>
-                        <i class="fa fa-mobile"> </i> <a > +91 9876543210</a><br><br>
-                    </div>
-                </div>
-            </div>
             </div>
             </div>
 
@@ -138,8 +129,6 @@
             </div>
         </div>
     </div>
-
-    <?php require 'footer.php'; ?>
 
 </body>
 </html>

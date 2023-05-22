@@ -53,12 +53,10 @@ if (isset($_SESSION['hid'])) {
       </div>
 
     </div>
-    <a href="register.php" class="text-center mb-4" title="Click here">Don't have account?</a>
 </div>
 </div>
 </div>
 </div>
-<?php require 'footer.php' ?>
 </body>
 </html>
 <?php } ?>

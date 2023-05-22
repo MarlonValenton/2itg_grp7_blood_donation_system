@@ -69,12 +69,10 @@ if (isset($_SESSION['hid'])) {
 
        </div>
     </div>
-    <a href="login.php" class="text-center mb-4" title="Click here">Already have account?</a>
 </div>
 </div>
 </div>
-</div>
-<?php require 'footer.php' ?>
+</div>  
 </body>
 </html>
 <?php } ?>

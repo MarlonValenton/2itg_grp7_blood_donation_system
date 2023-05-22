@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
 	<div class="container">
-		<a class="navbar-brand" href="index.php"><img src="image/favicon.jpg" width="30" height="30" class="rounded-circle">Blood Bank</a>
+		<a class="navbar-brand" href="index.php">Blood Donation System</a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><i class="fas fa-align-left"></i></span>
           </button>
