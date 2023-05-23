@@ -83,7 +83,7 @@ class Calendar {
   }
 }
 
-// (G) DATABASE SETTINGS - CHANGE TO YOUR OWN!
+// (G) DATABASE SETTINGS 
 define("DB_HOST", "localhost");
 define("DB_NAME", "bloodbank");
 define("DB_CHARSET", "utf8mb4");
